@@ -1,0 +1,43 @@
+Sample Requirement: Login Functionality for a Web Application,,,,,,,
+,,,,,,,
+The application must allow registered users to log in using their email and password.,,,,,,,
+1,The login form should have fields for email and password.,,,,,,
+2,"The ""Login"" button should be enabled only when both fields are filled.",,,,,,
+3,"If credentials are valid, the user should be redirected to the dashboard.",,,,,,
+4,"If credentials are invalid, an error message should appear: “Invalid email or password.”",,,,,,
+5,The password field should mask input characters using password masking button.,,,,,,
+6,"The ""Forgot Password?"" link should redirect to the password recovery page.",,,,,,
+,,,,,,,
+,,,,,,,
+Sr. No. ,Summary,Actions,Expected result,Data,Priority,Test type,Pre-condition
+1,Validate Login Page.,Check if the Login Page is opened.,User should be able to view the Login Page is opened.,,Highest,UI,Enter valid URL of the App Login Page.
+1,,Check if the Page title is displayed as 'Login' or 'Sign up'.,User should be able to view the page title is displayed as 'User' or 'Sign up'.,,,,
+1,,Check if all the valid fields are displayed on the Page.,"User should be able to view the fields as : 'Email' textfield, 'Password' textfield and 'Login' button.",,,,
+2,Validate the 'Login' button when 'Email' and 'Password' fields are blank.,Check if the 'Login' button is displayed on the page on a valid position.,User should be able to view the 'Login' button displayed below the textfields.,,High,UI,User should be on the valid App Login Page and should not enter any data in the textfields.
+2,,Check if the 'Login' button is displayed as disabled.,User should be able to view the 'Login' button is displayed as disabled.,,,,
+2,,Check if the 'Login' button is clickable.,User should be able to view that the 'Login' button is not clickable.,,,,
+3,Validate the 'Email' textfield with valid email id.,Click on the 'Email' textfield.,User should be able to click on the 'Email' textfield.,,High,Functional,User should be on the valid App Login Page and should not enter any data in the textfields.
+3,,Enter any valid Email id in the field.,User should be able to enter a valid email id in the field without getting any error message.,username123@emailid.xyz,,,
+4,Validate the 'Password' textfield with valid password according to the requirement.,Click on the 'Password' textfield.,User should be able to click on the 'Password' textfield.,,High,Functional,User should be on the valid App Login Page and should not enter any data in the textfields.
+4,,Enter the valid Password according to the requirement in the field.,User should be able to enter valid Password according to the requirement in the field without getting any error message.,eg. Pass@123,,,
+5,Validate the 'Login' button after entering valid data in both the text fields.,Check if the 'Login' button is displayed as enabled.,User should be able to view the 'Login' button is displayed as enabled.,,Highest,UI,User should be on the valid App Login Page and should have entered valid data in both textfields.
+5,,Check if the 'Login' button is clickable.,User should be able to view that the 'Login' button is clickable.,,,,
+6,Validate navigation to the 'Dashboard' Page.,Check if the user is successfully navigated to the 'Dashboard' Page.,User should be able to view the 'Dashboard' Page opened.,,High,Functional,User should be on the valid App Login Page and should have entered valid data in both textfields and clicked on the 'Login' Page.
+7,Validate the 'Email' textfield with invalid data.,Click on the 'Email' textfield.,User should be able to click on the 'Email' textfield.,,High,Functional,User should be on the valid App Login Page and should not enter any data in the textfields.
+7,,Enter any invalid format Email id in the field.,User should be able to enter any Email id in invalid format in the field.,user#name@9876.150&*,,,
+7,,Check if error message is displayed for the invalid data entered.,User should be able to view an error message displayed as “Invalid email or password.”,,,,
+8,Validate the 'Password' textfield with invalid password referring to the requirement.,Click on the 'Password' textfield.,User should be able to click on the 'Password' textfield.,,High,Functional,User should be on the valid App Login Page and should not enter any data in the textfields.
+8,,Enter any invalid format Password in the field.,User should be able to enter any invalid format Password in the field.,password,,,
+8,,Check if error message is displayed for the invalid data entered.,User should be able to view an error message displayed as “Invalid email or password.”,,,,
+9,Validate the 'Email' field with unregistered email id and Login.,Click on the 'Email' textfield.,User should be able to click on the 'Email' textfield.,,High,Functional,User should be on the valid App Login Page and should not enter any data in the textfields.
+9,,Enter an unregistered email id in the field.,User should be able to enter the unregistered email id in valid format in the field.,unregistered@emailid.abcde,,,
+9,,Enter a valid format password in the field.,User should be able to enter valid format password in the field.,Password@1234,,,
+9,,Click on the 'Login' button.,"User should be able to click on the 'Login' button and an error message should be displayed as ""Unregistered user email id.""",,,,
+10,Validate the error message displayed in Sentence case.,Check if the error messages are displayed in sentence case.,User should be able to view the error messages are displayed in sentence case.,,High,UI,User should be on the valid App Login Page and enter data in a way that error messages are displayed.
+10,,Check if the error messages are displayed in valid UI on the Page.,User should be able to view the error messages are displayed in valid UI on the Page.,,,,
+11,Validate the password masking functionality after entering in the field.,Enter a password in the field.,User should be able to enter a password in the field.,,High,UI,User should be on the valid App Login Page and a password should be entered in the field.
+11,,Check if the password masking button is displayed on the field.,User should be able to view the password masking button on the button.,,,,
+11,,Click on the password masking button and check if the password is hidden.,User should be able to click on the password masking button and the password should be hidden.,,,,
+12,"Validate the ""Forgot password?"" button.","Check if ""Forgot password?"" button is displayed on the Page.","User should be able to view the ""Forgot password?"" button is displayed on the page.",,High,Functional,User should be on the valid App Login Page.
+12,,Click on the button.,User should be able to click on the button.,,,,
+12,,Check if the password recovery page is displayed.,User should be able to view the password recovery page is displayed.,,,,
